@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Hello, Django</title>
+        {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}" />
     </head>
-    <body>
-        <strong>Hello there, {{ name }}!</strong> It's {{ date | date:"l, d F, Y" }} at {{ date | time:"H:i:s" }}
-    </body>
+    <span class="message"><h3>Hello, there {{ name }}! </h3></span> 
+    <span>It's {{ date | date:'l, d F, Y' }} at {{ date | time:'H:i:s' }}.</span>
 </html>
